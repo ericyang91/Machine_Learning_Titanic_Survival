@@ -1,4 +1,4 @@
-# Project-4-Survival Prediction on the Titanic Ship
+# Survival Prediction on the Titanic Ship
 
 <img src="https://images8.alphacoders.com/405/405029.jpg">
 
