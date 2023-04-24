@@ -104,11 +104,11 @@ Visualizations
 - Age Distribution
 
 ![Age Distribution](https://user-images.githubusercontent.com/115420417/232642239-d29a6bd4-70df-4264-b0bd-519c9079c599.png)
+![Passenger Class](https://user-images.githubusercontent.com/115420417/232641934-44f76aa6-b218-444e-9cc7-e583bd442f7f.png)
 
 ## Languages and Libraries
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/topics/python)
-![Passenger Class](https://user-images.githubusercontent.com/115420417/232641934-44f76aa6-b218-444e-9cc7-e583bd442f7f.png)
 [![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://github.com/topics/pandas)
 [![matplotlib](https://img.shields.io/badge/matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/topics/matplotlib)
 [![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://github.com/topics/google-colab)
