@@ -116,3 +116,7 @@ Visualizations
 [![Neural Network](https://img.shields.io/badge/Neural%20Network-FF6F00?style=for-the-badge)](https://github.com/topics/neural-network)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://github.com/topics/tensorflow)
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://github.com/topics/sqlite)
+[![Random Forest](https://img.shields.io/badge/Random_Forest-Machine_Learning-green)](https://en.wikipedia.org/wiki/Random_forest)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine_Learning-blue)](https://scikit-learn.org/)
+[![Tableau](https://img.shields.io/badge/Tableau-Data_Visualization-orange)](https://www.tableau.com/)
+
