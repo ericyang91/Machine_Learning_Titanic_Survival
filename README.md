@@ -108,14 +108,14 @@ Visualizations
 
 ## Languages and Libraries
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/topics/python)
-[![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://github.com/topics/pandas)
-[![matplotlib](https://img.shields.io/badge/matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/topics/matplotlib)
-[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://github.com/topics/google-colab)
-[![Logistic Regression](https://img.shields.io/badge/Logistic%20Regression-4F0599?style=for-the-badge)](https://github.com/topics/logistic-regression)
-[![Neural Network](https://img.shields.io/badge/Neural%20Network-FF6F00?style=for-the-badge)](https://github.com/topics/neural-network)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://github.com/topics/tensorflow)
-[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://github.com/topics/sqlite)
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![pandas](https://img.shields.io/badge/pandas-1.x-orange.svg)](https://pandas.pydata.org/)
+[![matplotlib](https://img.shields.io/badge/matplotlib-3.x-green.svg)](https://matplotlib.org/)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-blueviolet.svg)](https://colab.research.google.com/)
+[![Logistic Regression](https://img.shields.io/badge/Logistic%20Regression-red.svg)](https://en.wikipedia.org/wiki/Logistic_regression)
+[![Neural Networks](https://img.shields.io/badge/Neural%20Networks-yellow.svg)](https://en.wikipedia.org/wiki/Artificial_neural_network)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
+[![SQLite3](https://img.shields.io/badge/SQLite-3.x-blue.svg)](https://www.sqlite.org/index.html)
 [![Random Forest](https://img.shields.io/badge/Random_Forest-Machine_Learning-green)](https://en.wikipedia.org/wiki/Random_forest)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine_Learning-blue)](https://scikit-learn.org/)
 [![Tableau](https://img.shields.io/badge/Tableau-Data_Visualization-orange)](https://www.tableau.com/)
