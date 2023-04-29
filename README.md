@@ -1,110 +1,70 @@
-# Survival Prediction on the Titanic Ship
-
+# Machine Learning: Titanic Survival
 <img src="https://images8.alphacoders.com/405/405029.jpg">
 
-Using Machine learning algorithm on the famous Titanic Disaster Dataset for Predicting the survival of the passenger
+## Overview
 
-Data Information:
+The Titanic tragedy was a maritime disaster that occurred on April 15, 1912, when the RMS Titanic, a luxurious British passenger liner, struck an iceberg in the North Atlantic Ocean and sank during its maiden voyage from England to the USA. The Titanic was considered unsinkable, but the collision caused significant damage, and the ship's watertight compartments were breached, leading to flooding and ultimately the ship's sinking. Of the 2,224 passengers and crew on board, more than 1,500 lost their lives, making it one of the deadliest peacetime maritime disasters in history. The tragedy led to the strengthening of maritime regulations.
 
-    Survival: 0 = Did not survive, 1 = Survived
-    Pclass: Ticket class where 1 = First class, 2 = Second class, 3 = Third class.
-    Sex: Male or female
-    Age: Age of Passengers
-    SibSp: Number of siblings or spouses aboard the titanic
-    Parch: Number of parents or children aboard the titanic
-    Ticket: Passenger ticket number
-    Fare: Passenger fare
-    Cabin: Cabin number
-    Embarked: Point of embarkation where C = Cherbourg, Q = Queenstown, S = Southampton
- 
+The aim of this project is to demonstrate the predictability of passenger survival by using different machine learning algorithms such as the neural network, logistic regression, and random forest model. The output variables of the models are binary in nature to classify survival vs. death of a passenger. The dataset was downloaded from [Kaggle](https://www.kaggle.com/) and was pre-processed using Python, SQLite, and Scikit-Learn, and visualized through a [dashboard](https://public.tableau.com/app/profile/ji.yeol.yang/viz/titanic_16825642408080/Dashboard) created using Tableau.
 
-Dependencies:
+## Data Preparation
 
-    Python3
-    Numpy
-    Pandas
-    Sqlite
-    Matplotlib
-    Machine Learning Algorithm
-    Classification Algorithms
-    
-This Notebook contains:
+Below is a snippet of the dataset downloaded from Kaggle:
 
-    Data Handling
-    Importing Data with Pandas
-    Cleaning Data
-    Exploring Data through Visualizations with Matplotlib
+![rawdata]()
 
-Data Analysis:
+- PassengerId = Passenger ID
+- Survived: Survival (0 = No; 1 = Yes)
+- Pclass: Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)
+- Name: Name
+- sex: Sex
+- Age: Age
+- SibSp: Number of Siblings/Spouses Aboard
+- parch: Number of Parents/Children Aboard
+- Ticket: Ticket Number
+- Fare: Passenger Fare in British pound
+- Cabin: Cabin
+- Embarked: Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
+- boat: Boat identification number
+- body: Body identification number for passengers who did not survive
 
-    Logistic Regression
-    Random Forest
-    Neural network
-    
+The missing values in the age and fare columns were filled by calculating the average value of each column. Pclass, Embarked, and Sex columns were transformed into categorical data by performing one-hot coding. The original Pclass, Embarked, and Sex columns, as well as the Boat, Body, Name, Ticket, Cabin, and Index columns, were dropped because they were deemed unnecessary for the predictive analysis.
 
+![cleandata]()
 
-Preprocessing and Cleaning Data
-    - We have import the data into panada and sqlite to clean the data.
-    - The data have been reviewed and filled in null.
-    - after filled in all the null numbers, dropped unnecessary col
-  
-![Data Cleaning](https://user-images.githubusercontent.com/115420417/232640688-92aaf987-be7d-4a2d-b8e6-3e1c5abda3dc.png)
+The data was then split into target data (column = Survived) and input features (all other columns). The input features were then scaled before being fit and trained by machine learning models.
 
+## Neural Network
 
+The neural network involved 2 hidden layers, each with 24 and 12 neurons. The output layer consisted of only one neuron to reflect the binary nature of the study. The activation model for the two hidden layers was set to ReLu, and that of the output layer was set to Sigmoid. With 100 epochs, I was able to achieve roughly 83% accuracy on the training data and 80% on the testing data. Below is the classification report.
 
-Neural Network
+![classification]()
 
-- By using the Neural Network, our first attempt, loss = 0.44, accuracy = 0.81
-![original](https://user-images.githubusercontent.com/115420417/232641026-13a0f9e1-0711-4214-9b99-f19ba43329c6.jpg)
+Several attempts were made to optimize this model. The number of neurons, deep layers, the type of activation functions, and the number of epochs were adjusted, but the model did not improve in performance. The age feature was then transformed into multiple categorical variables for simpler model learning. However, none of these attempts led to improvement.
 
+## Logistic Regression
 
-- The second attempt, loss: 0.46, accuracy = 0.82
+The logistic regression model was the second of the three machine learning models used. After splitting, scaling, and fitting the model, the logistic regression model generated an accuracy score of 82%. The overall performance turned out to be better compared to the other two models.
 
-![optimization](https://user-images.githubusercontent.com/115420417/232641033-f6e2d815-e7a2-4996-a33b-24fce5696911.jpg)
+![logisticregression]()
 
-The neural network is the first of several models we used to predict the survival outcome of the Titanic tragedy. After cleaning up and scaling the data set, we used 13 input features to predict the outcome of passenger survival. We used two hidden layers that consisted of 26 and 13 neurons, with 1 neuron in the outcome layer for binary classification purpose. The ReLu function was used as our activation function for the two hidden layers, as the function is computationally more efficient than Tanh. The function also helps to address the vanishing gradient problem, which can lead to slower training and lower accuracy.
-We used the sigmoid function for our outcome layer due to its binary nature. With epoch set to 200, the model's accuracy was 0.81 with loss at 0.48.
+## Random Forest
+
+The last model was the random forest model. Again, the data was split, scaled, and trained. The accuracy score was around 80%.
+
+![randomforest]()
+
+## Interactive Dashboard
+
+An [interactive dashboard](https://public.tableau.com/app/profile/ji.yeol.yang/viz/titanic_16825642408080/Dashboard) that visualizes the survival rate vs. input features were created by using Tableau.
+
+![dash]()
 
 
-Supervised Learning
+## Review and Further Research
 
-- Logistic Regression
+Although logistic regression generated the best performing model out of the three models implemented, the differences in performance were small. All three models performed well in accuracy and precision, but not in the recall metrics for survivors. The reason for this is that the provided dataset was imbalanced with significantly fewer survivors than those who died. Given that none of the optimization attempts worked for the neural network model, a more balanced and larger dataset would help improve the model performance. It would also be interesting to build a predictive dashboard using Streamlit through which a user can predict whether a passenger will survive or not by entering different combinations of input features.
 
-![1681779282(1)](https://user-images.githubusercontent.com/115420417/232641491-395df0ed-b312-4f3b-a536-48aa5fa48285.png)
-
-- As the classified and binned data, we had needed to utilize classification based supervised learning models.
-- After training, the model achieved an overall accuracy of 80%.
-- With the available data, the model had the most difficulty with recall in detecting survivors.
-
-
-- Random Forest
-
-![1681779429(1)](https://user-images.githubusercontent.com/115420417/232641722-03e6bc78-bb2a-4ab2-97ff-4b1170114a2c.png)
-
-- The initial randomly selected parameters yielded 79.3% accuracy.
-- To fine tune the model, the grid_search command was used to train the model and determine the most accurate model.  
-- The first optimization yielded an accuracy of 79.6% with depth=20, samples/leaf=5, estimators=25
-- The second optimization yielded an accuracy of 79.7% with depth=20, samples/leaf=4, estimators=50
-
-
-Visualizations 
-
-- Passenger Class Distribution
-
-- Survived VS Not Survived
-
-![Survival and Not Survival](https://user-images.githubusercontent.com/115420417/232642175-62425376-1fcf-4287-a0ba-9a4793ca4b80.png)
-
-
-- Sex Distribution
-
-![Sex](https://user-images.githubusercontent.com/115420417/232642211-55471374-5bcb-4024-be87-3add22f8adb3.png)
-
-
-- Age Distribution
-
-![Age Distribution](https://user-images.githubusercontent.com/115420417/232642239-d29a6bd4-70df-4264-b0bd-519c9079c599.png)
-![Passenger Class](https://user-images.githubusercontent.com/115420417/232641934-44f76aa6-b218-444e-9cc7-e583bd442f7f.png)
 
 ## Languages and Libraries
 
